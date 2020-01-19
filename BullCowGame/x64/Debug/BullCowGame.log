@@ -1,2 +1,4 @@
-﻿  main.cpp
-  BullCowGame.vcxproj -> D:\Study\UE4\Unreal Engine Udemy Course\Section_2\x64\Debug\BullCowGame.exe
+﻿  FBullCowGame.cpp
+D:\Study\UE4\Unreal Engine Udemy Course\BullsAndCowsGame\BullCowGame\FBullCowGame.cpp(49,46): warning C4267: 'initializing': conversion from 'size_t' to 'int32', possible loss of data
+D:\Study\UE4\Unreal Engine Udemy Course\BullsAndCowsGame\BullCowGame\FBullCowGame.cpp(50,40): warning C4267: 'initializing': conversion from 'size_t' to 'int32', possible loss of data
+  BullCowGame.vcxproj -> D:\Study\UE4\Unreal Engine Udemy Course\BullsAndCowsGame\x64\Debug\BullCowGame.exe
