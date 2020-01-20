@@ -9,10 +9,20 @@ struct FBullCowCount {
 	int32 cows = 0;
 };
 
+enum class EGuessStatus {
+	INVALID_VALUE,
+	OK,
+	NOT_ISOGRAM,
+	WRONG_LENGTH,
+	NOT_LOWERCASE
+};
+
 class FBullCowGame {
 public:
 	int32 GetMaxTries() const;
 	int32 GetCurrentTry() const;
+	int32 GetHiddenWordLength() const;
+	EGuessStatus CheckGuessValidity(FString) const;
 	bool IsGameWon() const;
 
 	FBullCowGame();
@@ -21,8 +31,8 @@ public:
 	FBullCowGame& operator=(const FBullCowGame&);
 
 	void Reset();
-	bool CheckGuessValidity(FString);
-	FBullCowCount SubmitGuess(FString);
+
+	FBullCowCount SubmitValidGuess(FString);
 	
 
 
@@ -30,7 +40,9 @@ public:
 private:
 	int32 _currentTry = 1;
 	int32 _maxTries = 5;
-	bool isGameWon = false;
+	bool b_GameIsWon = false;
 	FString hiddenWord;
-
+	   
+	bool IsIsogram(FString) const;
+	bool IsUppercase(FString) const;
 };
